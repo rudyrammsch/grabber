@@ -1,0 +1,11 @@
+﻿################################################################################
+# Diese .gitignore-Datei wurde von Microsoft(R) Visual Studio automatisch erstellt.
+################################################################################
+
+/.vs
+/TestApp/bin
+/TestApp/obj
+*.DS_Store
+/WebGrabber/bin
+/WebGrabber/obj
+/WebGrabber/WebGrabber.csproj.user

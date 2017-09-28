@@ -1,0 +1,6 @@
+﻿namespace WebGrabber
+{
+    interface IDb
+    {
+    }
+}

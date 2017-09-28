@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26730.16
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WebGrabber", "WebGrabber\WebGrabber.csproj", "{051EA3CC-5CA3-45E0-BA5E-5BA5C2BAA1EA}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TestApp", "TestApp\TestApp.csproj", "{AB35A481-4468-454F-9933-F52FF8A4DD41}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{B795D058-0866-4762-B40A-1E020D1B756C}"
+	ProjectSection(SolutionItems) = preProject
+		README.md = README.md
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{051EA3CC-5CA3-45E0-BA5E-5BA5C2BAA1EA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{051EA3CC-5CA3-45E0-BA5E-5BA5C2BAA1EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{051EA3CC-5CA3-45E0-BA5E-5BA5C2BAA1EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{051EA3CC-5CA3-45E0-BA5E-5BA5C2BAA1EA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AB35A481-4468-454F-9933-F52FF8A4DD41}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AB35A481-4468-454F-9933-F52FF8A4DD41}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AB35A481-4468-454F-9933-F52FF8A4DD41}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AB35A481-4468-454F-9933-F52FF8A4DD41}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E0CD54C7-736C-442A-8C08-BA99082E2C7E}
+	EndGlobalSection
+EndGlobal
