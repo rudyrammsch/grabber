@@ -124,35 +124,25 @@ namespace WebGrabber.Entities
             if (artist == default(Artist))
                 artist = context.Artists.FirstOrDefault(a => a.id.Equals(songlog.Song.Artist.id));
 
-            //if (artist != default(Artist))
-            //    return artist;
-
-            if (artist == default(Artist))
+            if (artist != default(Artist))
             {
-                artist = new Artist
-                {
-                    id = songlog.Song.Artist.id,
-                    createdDate = songlog.Song.Artist.createdDate,
-                    modifiedDate = songlog.Song.Artist.modifiedDate,
-                    name = songlog.Song.Artist.name,
-                };
-
-                context.Artists.Add(artist);
-
+                artist.modifiedDate = songlog.Song.Artist.modifiedDate;
+                artist.name = songlog.Song.Artist.name;
+                context.Artists.Update(artist);
                 return artist;
             }
 
+            artist = new Artist
             {
-                context.Artists.Attach(artist);
+                id = songlog.Song.Artist.id,
+                createdDate = songlog.Song.Artist.createdDate,
+                modifiedDate = songlog.Song.Artist.modifiedDate,
+                name = songlog.Song.Artist.name,
+            };
 
-                var entry = context.Entry(artist);
-                entry.Property(a => a.modifiedDate).CurrentValue = songlog.Song.Artist.modifiedDate;
-                entry.Property(a => a.name).CurrentValue = songlog.Song.Artist.name;
+            context.Artists.Add(artist);
 
-                return entry.Entity;
-            }
-
-//            return artist;
+            return artist;
         }
     }
 
@@ -183,37 +173,27 @@ namespace WebGrabber.Entities
             if (song == default(Song))
                 song = context.Songs.FirstOrDefault(s => s.id.Equals(songlog.Song.id));
 
-            //if (song != default(Song))
-            //    return song;
-
-            if (song == default(Song))
+            if (song != default(Song))
             {
-                song = new Song
-                {
-                    createdDate = songlog.Song.createdDate,
-                    modifiedDate = songlog.Song.modifiedDate,
-                    id = songlog.Song.id,
-                    title = songlog.Song.title,
-                    ArtistId = artist.id,
-                    Artist = artist
-                };
-
-                context.Songs.Add(song);
-
+                song.modifiedDate = songlog.Song.modifiedDate;
+                song.title = songlog.Song.title;
+                context.Songs.Update(song);
                 return song;
             }
 
+            song = new Song
             {
-                context.Songs.Attach(song);
+                createdDate = songlog.Song.createdDate,
+                modifiedDate = songlog.Song.modifiedDate,
+                id = songlog.Song.id,
+                title = songlog.Song.title,
+                ArtistId = artist.id,
+                Artist = artist
+            };
 
-                var entry = context.Entry(song);
-                entry.Property(s => s.modifiedDate).CurrentValue = songlog.Song.modifiedDate;
-                entry.Property(s => s.title).CurrentValue = songlog.Song.title;
+            context.Songs.Add(song);
 
-                return entry.Entity;
-            }
-
-//            return song;
+            return song;
         }
     }
 

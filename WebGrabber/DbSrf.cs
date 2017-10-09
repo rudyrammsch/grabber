@@ -154,8 +154,6 @@ namespace WebGrabber
 
             using (var db = new SrfPlayListContext(OptionsBuilder.Options))
             {
-                db.ChangeTracker.AutoDetectChangesEnabled = false;
-
                 foreach (var songLogData in data.Songlog)
                 {
                     // check for already imported songlog

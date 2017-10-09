@@ -9,11 +9,6 @@ namespace TestApp
     {
         static void Main()
         {
-            //var dbSrf = new DbSrf();
-            //var json = File.ReadAllText(@"C:\Web\Grabber\download\test.json");
-            //dbSrf.Insert(json);
-            //Console.WriteLine("Hello World!");
-
             var dbSrf = new DbSrf();
 
             dbSrf.Import();
@@ -32,7 +27,7 @@ namespace TestApp
 
             File.WriteAllLines(@"C:\Web\Grabber\download\logs\import_" + DateTime.Now.Ticks + ".csv", entries);
 
-            Console.WriteLine("Hello World2!");
+            Console.WriteLine("Done!");
         }
     }
 }
